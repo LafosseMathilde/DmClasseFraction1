@@ -37,7 +37,7 @@ class Fraction{
         this.denominateur = denominateur;
     }
       //methode Division
-    public Fraction Division(Fraction frac){
+    public Fraction Division(Fraction fraction){
         this.numerateur = this.numerateur * frac.denominateur;
         this.denominateur = this.denominateur * frac.numerateur;
         return new Fraction(this.numerateur, this.denominateur);

@@ -1,6 +1,6 @@
 class Fraction{
     
-    //methode pour la création de la Classe Fraction
+    //constructeur
     public Fraction(final int numerateur, final int denominateur) {
         this.numerateur = numerateur;
         this.denominateur = denominateur;

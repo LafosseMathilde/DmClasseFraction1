@@ -1,30 +1,31 @@
 class Fraction{
     
+    //methode pour la création de la Classe Fraction
     public Fraction(final int numerateur, final int denominateur) {
         this.numerateur = numerateur;
         this.denominateur = denominateur;
     }
-    
+    //methode getter numerateur
     public int getLeNumerateur() {
         return this.numerateur;
     }
-    
+    //methode getter denominateur
     public int getLeDenominateur() {
         return this.denominateur;
     }
-    
+    //methode Addition
     public Fraction Addition(final Fraction fraction) {
         this.numerateur = this.numerateur * fraction.denominateur + this.denominateur * fraction.numerateur;
         this.denominateur *= fraction.denominateur;
         return new Fraction(this.numerateur, this.denominateur);
     }
-    
+    //methode Multiplication
     public Fraction Multiplication(final Fraction fraction) {
         this.numerateur *= fraction.numerateur;
         this.denominateur *= fraction.denominateur;
         return new Fraction(this.numerateur, this.denominateur);
     }
-    
+    //methode simplification Fraction
     public void SimplifierFraction() {
         final int pgcd = this.PGCD(this.numerateur, this.denominateur);
         this.numerateur /= pgcd;

@@ -71,9 +71,4 @@ class Fraction{
                 "\nLe numérateur est " + this.numerateur + ", le dénominateur est " + this.denominateur
                 + " et le PGCD est " + this.get_PGCD() + ".");
     }
-
-    
-    
-    
-   
 }

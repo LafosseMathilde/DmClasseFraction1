@@ -5,14 +5,44 @@ class Fraction{
         this.numerateur = numerateur;
         this.denominateur = denominateur;
     }
-    //methode getter numerateur
+    //methode getter du numerateur
     public int getLeNumerateur() {
         return this.numerateur;
     }
-    //methode getter denominateur
+    //methode getter du denominateur
     public int getLeDenominateur() {
         return this.denominateur;
     }
+     //methode getter du PGCD
+        public int get_PGCD() {
+        int a = this.numerateur;
+        int b = this.denominateur;
+        while (b != 0) {
+            if (a < b) {
+                remplacer = a;
+                a = b;
+                b = remplacer;
+            }
+            a = a - b;
+        }
+        return a;
+    }
+     //methode setter du numerateur
+    public void set_Numerateur(int numerateur){
+        this.numerateur = numerateur;
+    }
+
+    //methode setter du denominateur
+    public void set_Denominateur(int denominateur){
+        this.denominateur = denominateur;
+    }
+      //methode Division
+    public Fraction Division(Fraction frac){
+        this.numerateur = this.numerateur * frac.denominateur;
+        this.denominateur = this.denominateur * frac.numerateur;
+        return new Fraction(this.numerateur, this.denominateur);
+    }
+    
     //methode Addition
     public Fraction Addition(final Fraction fraction) {
         this.numerateur = this.numerateur * fraction.denominateur + this.denominateur * fraction.numerateur;
@@ -35,17 +65,15 @@ class Fraction{
             this.denominateur = -this.denominateur;
         }
     }
-    
-    private int PGCD(int n, int i) {
-        while (i != 0) {
-            final int n2 = n % i;
-            n = i;
-            i = n2;
-        }
-        return n;
-    }
-    
+     // methode Affichage
     public String Affichage() {
-        return invokedynamic(makeConcatWithConstants:(IIIII)Ljava/lang/String;, this.numerateur, this.denominateur, this.numerateur, this.denominateur, this.PGCD(this.numerateur, this.denominateur));
+        return ("La fraction est " + this.numerateur + "/" + this.denominateur + "." +
+                "\nLe numérateur est " + this.numerateur + ", le dénominateur est " + this.denominateur
+                + " et le PGCD est " + this.get_PGCD() + ".");
     }
+
+    
+    
+    
+   
 }

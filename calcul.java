@@ -1,4 +1,4 @@
-<?php
+
 import Fraction.*;
 class calcul {
         public static void main (String args[]) {

@@ -1,10 +1,22 @@
-
 import Fraction.*;
 class calcul {
+    private int numerateur;
+    private int denominateur;
+    
+    public Calcul(final int numerateur, final int denominateur){
+        this.numerateur = numerateur;
+        this.denominateur = denominateur;
+    }
+	//affichage PGCD
+    public String Affichage() {
+        return this.numerateur+ this.denominateur+ this.numerateur+ this.denominateur+ this.PGCD(this.numerateur, this.denominateur);
+    }
         public static void main (String args[]) {
-            Fraction Frac1 = new Fraction(2,7);
-            Fraction Frac2 = new Fraction(5,13);
-            System.out.println("\nLes fractions  : ");
-            System.out.println("Fraction N2 : " + Frac2.Affichage());
+            Calcul Calc1 = new Calcul(2,7);
+            Calcul Calc2 = new Calcul(5,13);
+            System.out.println("\nLes Calculs  : ");
+            System.out.println("Calcul N1 : " + Calc1.Affichage());
+            System.out.println("Calcul N2 : " + Calc2.Affichage());
         }
+	
 }

@@ -10,26 +10,31 @@ public class Fraction
         this.denominateur = denominateur;
     }
     
-    public int getLeNumerateur() {
+    public int get-numerateur() {
         return this.numerateur;
     }
     
-    public int getLeDenominateur() {
+    public int get-denominateur() {
         return this.denominateur;
     }
+	
+	
     
+	//Addition Fraction
     public Fraction Addition(final Fraction fraction) {
         this.numerateur = this.numerateur * fraction.denominateur + this.denominateur * fraction.numerateur;
         this.denominateur *= fraction.denominateur;
         return new Fraction(this.numerateur, this.denominateur);
     }
     
+	//Multiplication Fraction
     public Fraction Multiplication(final Fraction fraction) {
         this.numerateur *= fraction.numerateur;
         this.denominateur *= fraction.denominateur;
         return new Fraction(this.numerateur, this.denominateur);
     }
     
+	//Simplification Fraction
     public void SimplifierFraction() {
         final int pgcd = this.PGCD(this.numerateur, this.denominateur);
         this.numerateur /= pgcd;
@@ -49,6 +54,7 @@ public class Fraction
         return n;
     }
     
+	//affichage PGCD
     public String Affichage() {
         return invokedynamic(makeConcatWithConstants:(IIIII)Ljava/lang/String;, this.numerateur, this.denominateur, this.numerateur, this.denominateur, this.PGCD(this.numerateur, this.denominateur));
     }

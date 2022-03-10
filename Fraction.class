@@ -56,6 +56,6 @@ public class Fraction
     
 	//affichage PGCD
     public String Affichage() {
-        return invokedynamic(makeConcatWithConstants:(IIIII)Ljava/lang/String;, this.numerateur, this.denominateur, this.numerateur, this.denominateur, this.PGCD(this.numerateur, this.denominateur));
+        return (this.numerateur, this.denominateur, this.numerateur, this.denominateur, this.PGCD(this.numerateur, this.denominateur));
     }
 }
